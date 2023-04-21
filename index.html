@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800;900&family=Questrial&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+        
+</head>
+
+<body>
+    <div class="navbar-custom">
+        <div class="company__hamburger">
+            <img src="./images/menu-bar.svg" onclick="handleInOut()" style="cursor: pointer;" >
+            <img src="./images/header-logo.svg" />
+        </div>
+        <div class="Search-div">
+            <img src="./images/search-icon.svg" alt="" srcset="">
+            <input type="text" placeholder="Search..">
+        </div>
+        <img src="./images/notification-icon.svg" class="mobile-notification-icon" alt="" srcset="">
+        <div class="notification-profile">
+            <img src="./images/notification-icon.svg" alt="" srcset="">
+            <div class="profile">
+                <img src="./images/profile.png" style="object-fit: contain;" class="profile-pic" alt="" srcset="">
+                <p>John doe</p>
+                <img src="./images/downward-arrow.svg" class="down-arrow" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <div class="sidebar width-0" id="sidebar">
+        <div class="dashboard-options">
+            <div class="search-div-mobile" >
+                <img src="./images/search-icon.svg" alt="">
+                <input type="text" placeholder="search" name="" id="">
+            </div>
+            <div class="mobile-profile">
+                <img src="./images/profile.png" style="object-fit: contain;" alt="" srcset="">
+                <p>John Doe</p>
+                <img src="./images/downward-arrow.svg" alt="" srcset="">
+            </div>
+            <div class="dash-option dash-option-active">
+                <img src="./images/dashboard-active.svg" alt="" srcset="">
+                <p>Dashboard</p>
+            </div>
+            <div class="dash-option">
+                <img src="./images/graph-default.svg" alt="" srcset="">
+                <p>Analysis</p>
+            </div>
+            <div class="dash-option">
+                <img src="./images/inbox-default.svg" alt="" srcset="">
+                <p>Inbox</p>
+            </div>
+            <div class="dash-option">
+                <img src="./images/clock-default.svg" alt="" srcset="">
+                <p>History</p>
+            </div>
+            <div class="dash-option">
+                <img src="./images/user-default.svg" alt="" srcset="">
+                <p>Users</p>
+            </div>
+            <div class="dash-option">
+                <img src="./images/maintenance-default.svg" alt="" srcset="">
+                <p>Maintenance</p>
+            </div>
+            <div class="dash-option">
+                <img src="./images/setting-default.svg" alt="" srcset="">
+                <p>Setting</p>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-main">
+        <h1>Dashboard</h1>
+        <div class="details-container">
+            <div class="details">
+                <img src="./images/star.svg" alt="" srcset="">
+                <div>
+                    <p>23,456</p>
+                    <p>New Products</p>
+                </div>
+            </div>
+            <div class="details">
+                <img src="./images/new-product.svg" alt="" srcset="">
+                <div>
+                    <p>23,456</p>
+                    <p>Added Products</p>
+                </div>
+            </div>
+            <div class="details">
+                <img src="./images/total-product.svg" alt="" srcset="">
+                <div>
+                    <p>32,456</p>
+                    <p>Total Products</p>
+                </div>
+            </div>
+            <div class="details">
+                <img src="./images/dollar-filled.svg" alt="" srcset="">
+                <div>
+                    <p>5,456</p>
+                    <p>Today's sale</p>
+                </div>
+            </div>
+            <div class="details">
+                <img src="./images/money-bag.svg" alt="" srcset="">
+                <div>
+                    <p>2,21,234</p>
+                    <p>Total Sale</p>
+                </div>
+            </div>
+        </div>
+        <div class="graphs">
+            <div class="graph-1">
+                <div class="graph-title-bar">
+                    <p>Sale</p>
+                    <div class="options">
+                        <a href="">Weekly</a>
+                        <a href="">Monthly</a>
+                        <a href="" class="active-link">Yearly</a>
+                    </div>
+                </div>
+                <img src="./images/data-graph.png" alt="Data-graph" srcset="">
+            </div>
+            <div class="graph-2">
+                <div class="graph-title-bar">
+                    <p>Sales By Country</p>
+                </div>
+                <img src="./images/pie-chart.svg" alt="Pie Chart">
+                <div class="countries">
+                    <div>
+                        <div class="country-name">
+                            <div class="dot" style="background-color: #C8242F;"></div>
+                            <p>United States of America</p>
+                        </div>
+                        <div class="country-name">
+                            <div class="dot" style="background-color: #F16C20;"></div>
+                            <p>Russia</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="country-name">
+                            <div class="dot" style="background-color: #A2B86C;"></div>
+                            <p>Canada</p>
+                        </div>
+                        <div class="country-name">
+                            <div class="dot" style="background-color: #EBC844;"></div>
+                            <p>india</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="invoice-container">
+            <div class="invoice-titlebar">
+                <p>Invoices</p>
+                <a href="">View All</a>
+            </div>
+            <div class="invoice-table" style="overflow-x: auto;" >
+                <table>
+                    <tr>
+                        <th>INVOICE</th>
+                        <th>COMPANY NAME</th>
+                        <th>EMAIL</th>
+                        <th>DUE DATE</th>
+                        <th>STATUS</th>
+                        <th>AMOUNT</th>
+                    </tr>
+                    <tr>
+                        <td>651535</td>
+                        <td>Public Adjusting Firm</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td> <p class="common-status paid" >Paid</p> </td>
+                        <td>$47,800</td>
+                    </tr>
+                    <tr>
+                        <td>558612</td>
+                        <td>Public Adjusting Firm</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td> <p class="common-status paid" >Paid</p> </td>
+                        <td>$47,800</td>
+                    </tr>
+                    <tr>
+                        <td>651535</td>
+                        <td>Public Adjusting Firm</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td> <p class="common-status paid" >Paid</p> </td>
+                        <td>$47,800</td>
+                    </tr>
+                    <tr>
+                        <td>651535</td>
+                        <td>Public Adjusting Firm</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td> <p class="common-status pending" >Pending</p> </td>
+                        <td>$47,800</td>
+                    </tr>
+                    <tr>
+                        <td>651535</td>
+                        <td>Public Adjusting Firm</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td> <p class="common-status failed" >Failed</p> </td>
+                        <td>$47,800</td>
+                    </tr>
+                    <tr>
+                        <td>651535</td>
+                        <td>Public Adjusting Firm</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td> <p class="common-status pending" >Pending</p> </td>
+                        <td>$47,800</td>
+                    </tr>
+                    <tr>
+                        <td>651535</td>
+                        <td>Public Adjusting Firm</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td> <p class="common-status pending" >Pending</p> </td>
+                        <td>$47,800</td>
+                    </tr>
+                    <tr>
+                        <td>651535</td>
+                        <td>Public Adjusting Firm</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td> <p class="common-status failed" >Failed</p> </td>
+                        <td>$47,800</td>
+                    </tr>
+                    <tr>
+                        <td>651535</td>
+                        <td>Public Adjusting Firm</td>
+                        <td>georgia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td> <p class="common-status paid" >Paid</p> </td>
+                        <td>$47,800</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let sidebar = document.getElementById("sidebar");
+    function handleInOut() {
+        sidebar.classList.toggle("width-0")
+        sidebar.classList.toggle("sidebar-active")
+    }
+</script>
+
+</html>
